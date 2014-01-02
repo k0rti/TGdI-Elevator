@@ -1,0 +1,5 @@
+set -tmpdir "/media/windows/xilinx_lin/14.7/ISE_DS/TGdI-Projekt-ESA-Elevator/xst/projnav.tmp"
+set -xsthdpdir "/media/windows/xilinx_lin/14.7/ISE_DS/TGdI-Projekt-ESA-Elevator/xst"
+elaborate
+-ifn display_if.prj
+-ifmt mixed

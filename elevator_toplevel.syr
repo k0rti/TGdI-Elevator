@@ -1,0 +1,297 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: elevator_toplevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "elevator_toplevel.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "elevator_toplevel"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : elevator_toplevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "user_ctrl.v" in library work
+Compiling verilog file "sensor_if.v" in library work
+Module <user_ctrl> compiled
+Compiling verilog file "next_floor_ctrl.v" in library work
+Module <sensor_if> compiled
+Compiling verilog file "motor_if.v" in library work
+Module <next_floor_ctrl> compiled
+Compiling verilog file "keyboard_if.v" in library work
+Module <motor_if> compiled
+Compiling verilog file "floor_request_if.v" in library work
+Module <keyboard_if> compiled
+Compiling verilog file "display_if.v" in library work
+Module <floor_request_if> compiled
+Compiling verilog file "cabin_ctrl.v" in library work
+Module <display_if> compiled
+Compiling verilog file "elevator_toplevel.v" in library work
+Module <cabin_ctrl> compiled
+Module <elevator_toplevel> compiled
+No errors in compilation
+Analysis of file <"elevator_toplevel.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <elevator_toplevel> in library <work> with parameters.
+	CONTROL_STEP_BITS_CABIN = "00000000000000000000000000001111"
+	CONTROL_STEP_BITS_DOOR = "00000000000000000000000000000101"
+	CTRL_STEP_CABIN = "00000000000000000000000000001010"
+	CTRL_STEP_DOOR = "00000000000000000000000000001010"
+	C_0_CABIN = "00000000000000011000011010100000"
+	C_0_DOOR = "00000000000000011000011010100000"
+	C_MIN_CABIN = "00000000000000000000000011111010"
+	C_MIN_DOOR = "00000000000000000000001111101000"
+	DELAY_COUNTER_BITS_CABIN = "00000000000000000000000000010001"
+	DELAY_COUNTER_BITS_DOOR = "00000000000000000000000000010001"
+	DISPLAY_SEGMENTS = "00000000000000000000000000001110"
+	DISTANCE_BITS_BUILDING = "00000000000000000000000000010011"
+	DISTANCE_BITS_DOOR = "00000000000000000000000000001000"
+	DISTANCE_BITS_FLOORS = "00000000000000000000000000001100"
+	DISTANCE_BUILDING = "00000000000001000111110001110000"
+	DISTANCE_DOOR = "00000000000000000000000010100000"
+	DOOR_STOP_INTERVAL = "00000000000000000000000000000010"
+	DOOR_WIDTH = "00000000000000000000000010100000"
+	FLOOR_BITS = "00000000000000000000000000000111"
+	FLOOR_HEIGHT = "00000000000000000000101110111000"
+	GLOBAL_CLOCK_FREQUENCY = "00000000000000000000000000010100"
+	INIT_POSITION_CABIN = "00000000000000000000000000000000"
+	INIT_POSITION_DOOR = "00000000000000000000000000000000"
+	MAX_MOTOR_FREQ_CABIN = "00000000000000000000000000101000"
+	MAX_MOTOR_FREQ_DOOR = "00000000000000000000000000001010"
+	MAX_POSITION_L_CABIN = "00000000000000000000000000000000"
+	MAX_POSITION_L_DOOR = "00000000000000000000000000000000"
+	MAX_POSITION_R_CABIN = "00000000000000000111001011011000"
+	MAX_POSITION_R_DOOR = "00000000000000000000000000010000"
+	MAX_WEIGHT = "00000000000000000000000111110100"
+	MIN_MOTOR_FREQ_CABIN = "00000000000000000000000001100100"
+	MIN_MOTOR_FREQ_DOOR = "00000000000000000000000001100100"
+	MOTOR_STEP_BITS_CABIN = "00000000000000000000000000010100"
+	MOTOR_STEP_BITS_DOOR = "00000000000000000000000000010100"
+	MOTOR_STEP_CABIN = "00000000000000000000000000110010"
+	MOTOR_STEP_DOOR = "00000000000000000000000001100100"
+	NUM_FLOORS = "00000000000000000000000001100011"
+	VELOCITY_SENSOR_BITS = "00000000000000000000000000001011"
+	VELOCITY_THRESHOLD = "00000000000000000000011111010000"
+	WAIT_CYCLES_DOOR = "00000010011000100101101000000000"
+	WAIT_CYCLES_DOOR_BITS = "00000000000000000000000000011010"
+	WEIGHT_SENSOR_BITS = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <display_if> in library <work> with parameters.
+	DISPLAY_SEGMENTS = "00000000000000000000000000001110"
+	FLOOR_BITS = "00000000000000000000000000000111"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <elevator_toplevel>.
+	CONTROL_STEP_BITS_CABIN = 32'b00000000000000000000000000001111
+	CONTROL_STEP_BITS_DOOR = 32'b00000000000000000000000000000101
+	CTRL_STEP_CABIN = 32'sb00000000000000000000000000001010
+	CTRL_STEP_DOOR = 32'sb00000000000000000000000000001010
+	C_0_CABIN = 32'sb00000000000000011000011010100000
+	C_0_DOOR = 32'sb00000000000000011000011010100000
+	C_MIN_CABIN = 32'sb00000000000000000000000011111010
+	C_MIN_DOOR = 32'sb00000000000000000000001111101000
+	DELAY_COUNTER_BITS_CABIN = 32'b00000000000000000000000000010001
+	DELAY_COUNTER_BITS_DOOR = 32'b00000000000000000000000000010001
+	DISPLAY_SEGMENTS = 32'sb00000000000000000000000000001110
+	DISTANCE_BITS_BUILDING = 32'b00000000000000000000000000010011
+	DISTANCE_BITS_DOOR = 32'b00000000000000000000000000001000
+	DISTANCE_BITS_FLOORS = 32'b00000000000000000000000000001100
+	DISTANCE_BUILDING = 32'sb00000000000001000111110001110000
+	DISTANCE_DOOR = 32'sb00000000000000000000000010100000
+	DOOR_STOP_INTERVAL = 32'sb00000000000000000000000000000010
+	DOOR_WIDTH = 32'sb00000000000000000000000010100000
+	FLOOR_BITS = 32'b00000000000000000000000000000111
+	FLOOR_HEIGHT = 32'sb00000000000000000000101110111000
+	GLOBAL_CLOCK_FREQUENCY = 32'sb00000000000000000000000000010100
+	INIT_POSITION_CABIN = 32'sb00000000000000000000000000000000
+	INIT_POSITION_DOOR = 32'sb00000000000000000000000000000000
+	MAX_MOTOR_FREQ_CABIN = 32'sb00000000000000000000000000101000
+	MAX_MOTOR_FREQ_DOOR = 32'sb00000000000000000000000000001010
+	MAX_POSITION_L_CABIN = 32'sb00000000000000000000000000000000
+	MAX_POSITION_L_DOOR = 32'sb00000000000000000000000000000000
+	MAX_POSITION_R_CABIN = 32'sb00000000000000000111001011011000
+	MAX_POSITION_R_DOOR = 32'sb00000000000000000000000000010000
+	MAX_WEIGHT = 32'sb00000000000000000000000111110100
+	MIN_MOTOR_FREQ_CABIN = 32'sb00000000000000000000000001100100
+	MIN_MOTOR_FREQ_DOOR = 32'sb00000000000000000000000001100100
+	MOTOR_STEP_BITS_CABIN = 32'sb00000000000000000000000000010100
+	MOTOR_STEP_BITS_DOOR = 32'sb00000000000000000000000000010100
+	MOTOR_STEP_CABIN = 32'sb00000000000000000000000000110010
+	MOTOR_STEP_DOOR = 32'sb00000000000000000000000001100100
+	NUM_FLOORS = 32'sb00000000000000000000000001100011
+	VELOCITY_SENSOR_BITS = 32'sb00000000000000000000000000001011
+	VELOCITY_THRESHOLD = 32'sb00000000000000000000011111010000
+	WAIT_CYCLES_DOOR = 32'sb00000010011000100101101000000000
+	WAIT_CYCLES_DOOR_BITS = 32'b00000000000000000000000000011010
+	WEIGHT_SENSOR_BITS = 32'sb00000000000000000000000000001010
+WARNING:Xst:2211 - "keyboard_if.v" line 192: Instantiating black box module <keyboard_if>.
+WARNING:Xst:2211 - "user_ctrl.v" line 212: Instantiating black box module <user_ctrl>.
+WARNING:Xst:2211 - "floor_request_if.v" line 244: Instantiating black box module <floor_request_if>.
+WARNING:Xst:2211 - "motor_if.v" line 272: Instantiating black box module <motor_if>.
+WARNING:Xst:2211 - "motor_if.v" line 300: Instantiating black box module <motor_if>.
+WARNING:Xst:2211 - "next_floor_ctrl.v" line 319: Instantiating black box module <next_floor_ctrl>.
+WARNING:Xst:2211 - "sensor_if.v" line 337: Instantiating black box module <sensor_if>.
+WARNING:Xst:2211 - "cabin_ctrl.v" line 360: Instantiating black box module <cabin_ctrl>.
+Module <elevator_toplevel> is correct for synthesis.
+ 
+    Set user-defined property "FLOORS =  00000063" for instance <KEYBOARD_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "FLOOR_BITS =  00000007" for instance <KEYBOARD_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "FLOORS =  00000063" for instance <USER_CTRL_i> in unit <elevator_toplevel>.
+    Set user-defined property "FLOOR_BITS =  00000007" for instance <USER_CTRL_i> in unit <elevator_toplevel>.
+    Set user-defined property "FLOORS =  00000063" for instance <FLOOR_REQUEST_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "FLOOR_BITS =  00000007" for instance <FLOOR_REQUEST_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "CONTROL_STEP =  0000000A" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "CONTROL_STEP_BITS =  00000005" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "C_0 =  000186A0" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "C_MIN =  000003E8" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "DELAY_COUNT_BITS =  00000011" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "DISTANCE_BITS =  00000008" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "INITIAL_POSITION =  00000000" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "MAX_POSITION_L =  00000000" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "MAX_POSITION_R =  00000010" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "MOTOR_STEP =  00000064" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "MOTOR_STEP_BITS =  00000014" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "MOTOR_STEP_BITS2 =  00000014" for instance <DOOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "CONTROL_STEP =  0000000A" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "CONTROL_STEP_BITS =  0000000F" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "C_0 =  000186A0" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "C_MIN =  000000FA" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "DELAY_COUNT_BITS =  00000011" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "DISTANCE_BITS =  00000013" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "INITIAL_POSITION =  00000000" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "MAX_POSITION_L =  00000000" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "MAX_POSITION_R =  000072D8" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "MOTOR_STEP =  00000032" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "MOTOR_STEP_BITS =  00000014" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "MOTOR_STEP_BITS2 =  00000012" for instance <ELEVATOR_MOTOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "FLOORS =  00000063" for instance <NEXT_FLOOR_CTRL_i> in unit <elevator_toplevel>.
+    Set user-defined property "FLOOR_BITS =  00000007" for instance <NEXT_FLOOR_CTRL_i> in unit <elevator_toplevel>.
+    Set user-defined property "MAX_WEIGHT =  000001F4" for instance <SENSOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "VELOCITY_BITS =  0000000B" for instance <SENSOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "VELOCITY_THRESHOLD =  000007D0" for instance <SENSOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "WEIGHT_BITS =  0000000A" for instance <SENSOR_IF_i> in unit <elevator_toplevel>.
+    Set user-defined property "CONTROL_STEP_DISTANCE =  0000000A" for instance <CABIN_CTRL_i> in unit <elevator_toplevel>.
+    Set user-defined property "DISTANCE_BITS_BUILDING =  00000013" for instance <CABIN_CTRL_i> in unit <elevator_toplevel>.
+    Set user-defined property "DISTANCE_BITS_FLOORS =  0000000C" for instance <CABIN_CTRL_i> in unit <elevator_toplevel>.
+    Set user-defined property "FLOOR_BITS =  00000007" for instance <CABIN_CTRL_i> in unit <elevator_toplevel>.
+    Set user-defined property "FLOOR_HEIGHT =  00000BB8" for instance <CABIN_CTRL_i> in unit <elevator_toplevel>.
+    Set user-defined property "WAIT_CYCLE =  02625A00" for instance <CABIN_CTRL_i> in unit <elevator_toplevel>.
+    Set user-defined property "WAIT_CYCLE_BITS =  0000001A" for instance <CABIN_CTRL_i> in unit <elevator_toplevel>.
+Analyzing module <display_if> in library <work>.
+	DISPLAY_SEGMENTS = 32'sb00000000000000000000000000001110
+	FLOOR_BITS = 32'b00000000000000000000000000000111
+ERROR:Xst:855 - "display_if.v" line 43: Unsupported procedural assignment for signal <temp>.
+ 
+Found 1 error(s). Aborting synthesis.
+--> 
+
+
+Total memory usage is 511892 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

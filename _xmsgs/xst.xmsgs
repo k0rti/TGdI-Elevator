@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">keyboard_if.v</arg>&quot; line <arg fmt="%d" index="2">192</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">keyboard_if</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">user_ctrl.v</arg>&quot; line <arg fmt="%d" index="2">212</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">user_ctrl</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">floor_request_if.v</arg>&quot; line <arg fmt="%d" index="2">244</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">floor_request_if</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">motor_if.v</arg>&quot; line <arg fmt="%d" index="2">272</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">motor_if</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">motor_if.v</arg>&quot; line <arg fmt="%d" index="2">300</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">motor_if</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">next_floor_ctrl.v</arg>&quot; line <arg fmt="%d" index="2">319</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">next_floor_ctrl</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">sensor_if.v</arg>&quot; line <arg fmt="%d" index="2">337</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">sensor_if</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">cabin_ctrl.v</arg>&quot; line <arg fmt="%d" index="2">360</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">cabin_ctrl</arg>&gt;.
+</msg>
+
+<msg type="error" file="Xst" num="855" delta="new" >&quot;<arg fmt="%s" index="1">display_if.v</arg>&quot; line <arg fmt="%d" index="2">43</arg>: Unsupported procedural assignment for signal &lt;<arg fmt="%s" index="3">temp</arg>&gt;.
+</msg>
+
+</messages>
+

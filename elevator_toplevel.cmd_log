@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/media/windows/xilinx_lin/14.7/ISE_DS/TGdI-Projekt-ESA-Elevator/elevator_toplevel.xst" -ofn "/media/windows/xilinx_lin/14.7/ISE_DS/TGdI-Projekt-ESA-Elevator/elevator_toplevel.syr" 
+xst -intstyle ise -ifn "/media/windows/xilinx_lin/14.7/ISE_DS/TGdI-Projekt-ESA-Elevator/elevator_toplevel.xst" -ofn "/media/windows/xilinx_lin/14.7/ISE_DS/TGdI-Projekt-ESA-Elevator/elevator_toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 elevator_toplevel.ngc elevator_toplevel.ngd  
+xst -intstyle ise -ifn "/media/windows/xilinx_lin/14.7/ISE_DS/TGdI-Projekt-ESA-Elevator/elevator_toplevel.xst" -ofn "/media/windows/xilinx_lin/14.7/ISE_DS/TGdI-Projekt-ESA-Elevator/elevator_toplevel.syr" 

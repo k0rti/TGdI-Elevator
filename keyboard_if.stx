@@ -1,0 +1,42 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /media/windows/xilinx_lin/14.7/ISE_DS/TGdI-Projekt-ESA-Elevator/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> 
+Parameter xsthdpdir set to /media/windows/xilinx_lin/14.7/ISE_DS/TGdI-Projekt-ESA-Elevator/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "keyboard_if.v" in library work
+WARNING:HDLCompilers:21 - "keyboard_if.v" line 51 Zero width on based number ignored
+Module <keyboard_if> compiled
+No errors in compilation
+Analysis of file <"keyboard_if.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> 
+
+
+Total memory usage is 475192 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
